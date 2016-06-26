@@ -1,0 +1,30 @@
+block config
+	include ../config/var
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title #{titulo} | #{site}
+		meta(name="description" content="#{descripcion}")
+		link(rel="stylesheet", href="bower_components/ed-grid/css/styles.css")
+		link(rel="stylesheet", href="css/main.css")
+	body
+		header.ed-container
+			.ed-item.web-20
+				include ../blocks/logo
+			.ed-item.web-80
+				nav
+					include ../blocks/menu
+		#banner.ed-container
+			.ed-item
+				include ../blocks/banner
+		.ed-container
+			main.ed-item.web-75
+				block main
+			aside.ed-item.web-25
+				block aside 
+		footer
+			.ed-container
+				.ed-item
+					include ../blocks/footer
